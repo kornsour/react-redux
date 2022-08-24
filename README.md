@@ -12,6 +12,8 @@ From the terminal, cd into a project and run `npm start`
 - [semantic-ui](http://semantic-ui.com/)
 - [babel](https://babeljs.io/)
 - [Redux](https://redux.js.org/)
+- [Unsplash API](https://unsplash.com)
+- [Axios NPM Package](https://www.npmjs.com/package/axios)
 
 ## Notes
 
@@ -53,3 +55,51 @@ From the terminal, cd into a project and run `npm start`
 - shouldCompoentUpdate
 - getDerivedStateFromProps
 - getSnapshotBeforeUpdate
+
+### Controlled vs Uncontrolled Elements
+
+- Example Controlled Element Flow
+  - User types in input
+  - Callback gets invoked
+  - We call setState with the new value
+  - Component rerenders
+  - Input is told what its value is (coming from state)
+- Uncontrolled Elements
+  - Don't really know what the value of the input is right now
+  - The source of truth is in the HTML document, not the react component
+- Controlled Elements
+  - The React side of the app is driving all the data flowing through our app
+  - Not storing data inside the DOM
+  - We can look directly at the React component and see the value of the input
+
+### Understanding "this" in JavaScript
+
+What is "this" used for in a class?
+
+- "this" refers to an instance of the SearchBar class
+- So you could access the instance's state with "this.state"
+
+How is the value of "this" determined in a function?
+
+- An instance of the class is instantiated followed by a function call
+
+        class Car {
+            setDriveSound(sound) {
+                this.sound = sound;
+            }
+
+            drive() {
+                return this.sound;
+            }
+        }
+
+        const car = new Car();
+        car.setDriveSound('Vroom!');
+
+- But what happens when we set a variable as a function itself?
+
+        const drive = car.drive;
+        drive(); // Cannot read property 'sound' of undefined
+
+- So when you get an error in React similar to "Cannot read property 'state' of undefined", the same type of thing is happening
+  - At that point in time, "this" is undefined
