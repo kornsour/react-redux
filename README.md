@@ -103,3 +103,12 @@ How is the value of "this" determined in a function?
 
 - So when you get an error in React similar to "Cannot read property 'state' of undefined", the same type of thing is happening
   - At that point in time, "this" is undefined
+
+### Event Handlers
+
+- Anytime you have a callback function, use arrow function syntax to bind a function and make sure it has the appropriate value of "this"
+- With props, we only communicate from a parent compoenent to a child component
+  - To go from a child to a parent, we pass a callback from the parent to the child and the child then calls the callback
+- Will most likely want to use the "map" function when rendering lists
+  - Make sure to define a unique "key" for each list item
+- If we want to reach into the DOM and interact with an individual element, we're going to create a ref inside the constructor and wire it up to the individual element by passing it as a ref property
