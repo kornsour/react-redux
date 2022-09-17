@@ -14,6 +14,7 @@ From the terminal, cd into a project and run `npm start`
 - [Redux](https://redux.js.org/)
 - [Unsplash API](https://unsplash.com)
 - [Axios NPM Package](https://www.npmjs.com/package/axios)
+- [YouTube Data API](https://developers.google.com/youtube/v3/docs/search/list)
 
 ## Notes
 
