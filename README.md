@@ -113,3 +113,14 @@ How is the value of "this" determined in a function?
 - Will most likely want to use the "map" function when rendering lists
   - Make sure to define a unique "key" for each list item
 - If we want to reach into the DOM and interact with an individual element, we're going to create a ref inside the constructor and wire it up to the individual element by passing it as a ref property
+
+### Hooks System
+
+- useState
+  - Function that lets you use state in a functional componenet
+- useEffect
+  - Function that lets you use something like lifecycle methods in a functional component
+- useRef
+  - Function that lets you create a 'ref'in a function component
+- Hooks are a way to write usable code, instead of more classic techniques like inheritance
+- Use primative hooks to create custom hooks
