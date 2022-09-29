@@ -120,6 +120,13 @@ How is the value of "this" determined in a function?
   - Function that lets you use state in a functional componenet
 - useEffect
   - Function that lets you use something like lifecycle methods in a functional component
+  - We can configure the hook to run some code automatically in one of three scenarios:
+    - When the component is rendered for the first time only
+      - An empty array [] as the second argument of useEffect
+    - When the component is rendered for the first time and whenever it re-renders
+      - Nothing passed as second arugment
+    - When the component is rendered for the irst time and (whenever it re-renders and some piece of data has changed)
+      - An array with data in it [data] as the second argument
 - useRef
   - Function that lets you create a 'ref'in a function component
 - Hooks are a way to write usable code, instead of more classic techniques like inheritance
