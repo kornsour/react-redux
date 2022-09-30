@@ -131,3 +131,18 @@ How is the value of "this" determined in a function?
   - Function that lets you create a 'ref'in a function component
 - Hooks are a way to write usable code, instead of more classic techniques like inheritance
 - Use primative hooks to create custom hooks
+
+### Custom Hooks
+
+- Best way to create reusable code in a React project (besides components)
+- Created by extracting hook-related code out of a function component
+- Custom hooks always make use of at least one primitive hook internally
+- Each custom hook should have one purpose
+- Data-fetching is a great thing to try to make reusable
+- Process for creating reusable hooks
+  - NOTE: custom hooks are not a one size fits all kind of thing
+    - So this process may not cut it for every situtation
+  - Identify each line of code related to some single purpose
+  - Identify the inputs to that code
+  - Identify the outputs of that code
+  - Extract all of the code into a separate function, receiving the inputs as aguments and returning the outputs

@@ -1,0 +1,13 @@
+.video-item {
+    /* 
+    In general, not advised to use an !important rule but using for now to quickly mock it up.
+    TODO: Figure out what to do instead of using !important
+    */
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer;
+}
+
+.video-item.item img {
+    max-width: 180px;
+}
