@@ -146,3 +146,31 @@ How is the value of "this" determined in a function?
   - Identify the inputs to that code
   - Identify the outputs of that code
   - Extract all of the code into a separate function, receiving the inputs as aguments and returning the outputs
+
+### Redux
+
+- Cycle Analogy
+  - Action Creator
+    - Can think of it like a customer of a company dropping off a form
+  - Action
+    - Like a form that wants to change some sort of data at the company
+  - Dispatch
+    - Like a form receiver that makes copies of the form and hands it off to different departments in the company
+  - Reducers
+    - Like departments in the company that have their own separate policies, claims, etc (separate slices of data)
+    - When changing something inside a reducer, always avoid modifying existing data structures
+    - In ES2015, using something like `...myArray, action.payload` takes an existing array (myArray) and moves all the records in that array to a new array (action.payload)
+  - State
+    - Like compiled department data
+- Redux Notes
+  - Cycle
+    - To change state of our app, we call an Action Creator
+      - The Action Creator produces an Action
+        - The Action gets fed to dispatch
+          - Dispatch forwards the action to Reducers
+            - The Reducer creates new State
+              - The app waits until we need to update state again and the process starts over
+  - One of the main goals of Redux is to have a much more stable level of complexity as your app grows
+    - We can only modify our data through Action Creators, so our app is more self documenting
+      - Clearer for engineers who start on your project
+      - We want a very small, set number of ways that we can modify our data
