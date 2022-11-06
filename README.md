@@ -150,12 +150,10 @@ How is the value of "this" determined in a function?
 ### Redux
 
 - What is it?
-
   - State management library
   - Makes creating complex applications easier
   - Not required to create a React app
   - Not explicitly designed to work with React
-
 - Cycle Analogy
   - Action Creator
     - Can think of it like a customer of a company dropping off a form
@@ -178,4 +176,3 @@ How is the value of "this" determined in a function?
             - The Reducer creates new State
               - The app waits until we need to update state again and the process starts over
   - One of the main goals of Redux is to have a much more stable level of complexity as your app grows - We can only modify our data through Action Creators, so our app is more self documenting - Clearer for engineers who start on your project - We want a very small, set number of ways that we can modify our data
-    > > > > > > > 49bf085e9a528d3c97d08a8858755088dd1cac04
