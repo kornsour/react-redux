@@ -175,4 +175,7 @@ How is the value of "this" determined in a function?
           - Dispatch forwards the action to Reducers
             - The Reducer creates new State
               - The app waits until we need to update state again and the process starts over
-  - One of the main goals of Redux is to have a much more stable level of complexity as your app grows - We can only modify our data through Action Creators, so our app is more self documenting - Clearer for engineers who start on your project - We want a very small, set number of ways that we can modify our data
+  - One of the main goals of Redux is to have a much more stable level of complexity as your app grows
+    - We can only modify our data through Action Creators, so our app is more self documenting
+    - Clearer for engineers who start on your project
+    - We want a very small, set number of ways that we can modify our data
