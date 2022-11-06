@@ -146,3 +146,11 @@ How is the value of "this" determined in a function?
   - Identify the inputs to that code
   - Identify the outputs of that code
   - Extract all of the code into a separate function, receiving the inputs as aguments and returning the outputs
+
+### Redux
+
+- What is it?
+  - State management library
+  - Makes creating complex applications easier
+  - Not required to create a React app
+  - Not explicitly designed to work with React
