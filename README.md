@@ -179,3 +179,5 @@ How is the value of "this" determined in a function?
     - We can only modify our data through Action Creators, so our app is more self documenting
     - Clearer for engineers who start on your project
     - We want a very small, set number of ways that we can modify our data
+  - Redux does not automatically detect action creators being called
+    - Redux does not automatically detect a function returning an object that is an 'action'
