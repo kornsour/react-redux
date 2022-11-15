@@ -181,3 +181,18 @@ How is the value of "this" determined in a function?
     - We want a very small, set number of ways that we can modify our data
   - Redux does not automatically detect action creators being called
     - Redux does not automatically detect a function returning an object that is an 'action'
+  - Packages
+    - redux: the redux library
+    - react-redux: integration layer between react and redux
+    - axios: helps us make network requests
+    - redux-thunk: middleware to help us make requests in a redux application
+  - General Data Loading with Redux
+    - Component gets rendered onto the screen
+    - Component's 'componentDidMount' lifecycle method gets called
+    - We call action creator from 'componentDidMount'
+    - Action creator runs code to make an API request
+    - API responds with data
+    - Action creator returns an 'action' with the fetched data on the 'payload' property
+    - Some reducer sees the action, returns the data off the 'payload'
+    - Because we generated some new state object, redux/react-redux cause our React app to be rerendered
+  - Action creators must return plain JS objects with a type property
