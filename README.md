@@ -196,6 +196,22 @@ How is the value of "this" determined in a function?
     - Some reducer sees the action, returns the data off the 'payload'
     - Because we generated some new state object, redux/react-redux cause our React app to be rerendered
   - Action creators must return plain JS objects with a type property
+- Middleware in Redux
+  - Function that getrs called with every action we dispatch
+  - Has the ability to STOP, MODIFY, or otherwise mess around with actions
+  - Tons of open source middleware exist
+  - Most popular use of middleware is for dealing with async actions
+  - We are going to use middleware called 'Redux-Thunk' to solve our async issues
+- Redux Thunk
+  - Normal Rules
+    - Action Creators must return action objects
+    - Actions must have a type property
+    - Actions can optionally have a 'payload'
+  - Rules with Redux Thunk
+    - Action Creators can return action objects
+    - OR Action Creators can return functions
+      - If an action object gets returns, it must have a type
+      - If an action objects gets returned, it can optionally have a 'payload'
 - Rules of Reducers
   - Must return any value besides 'undefined'
   - Produces 'state' or data to be used inside of your app using only previous state and the action (reducers are pure)
