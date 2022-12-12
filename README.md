@@ -217,3 +217,7 @@ How is the value of "this" determined in a function?
   - Produces 'state' or data to be used inside of your app using only previous state and the action (reducers are pure)
   - Must not return reach 'out of itself' to decide what value to return
   - Must not mutate its input 'state' argument
+    - Misleading, its easier to tell beginners "don't mutate state ever" than to tell them when they can/can't
+    - Corner case for when mutaing state will result in an error
+      - NOTE: Best practice is to not mutate state but this helps better understand what is happening behind the scenes of Redux
+      - If you accidentally return the same value for state, your React app will never re-render
