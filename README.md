@@ -196,3 +196,8 @@ How is the value of "this" determined in a function?
     - Some reducer sees the action, returns the data off the 'payload'
     - Because we generated some new state object, redux/react-redux cause our React app to be rerendered
   - Action creators must return plain JS objects with a type property
+- Rules of Reducers
+  - Must return any value besides 'undefined'
+  - Produces 'state' or data to be used inside of your app using only previous state and the action (reducers are pure)
+  - Must not return reach 'out of itself' to decide what value to return
+  - Must not mutate its input 'state' argument
