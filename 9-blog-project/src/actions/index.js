@@ -16,12 +16,16 @@ export const fetchPosts = () => async (dispatch) => {
 //   dispatch({ type: "FETCH_USER", payload: response.data });
 // };
 
-export const fetchUser = _.memoize(function (id) {
-  // without memoize, redux thunk will call this function multiple times to fetch the user
-  // instead of just once which is what we want
-  return async function (dispatch) {
-    const response = await jsonPlaceholder.get(`/users/${id}`);
+export const fetchUser = (id) => (dispatch) => {
+  _fetchUser(id, dispatch);
+};
 
-    dispatch({ type: "FETCH_USER", payload: response.data });
-  };
+// underscore is used to tell other engineers that this is a private function and it should not be called
+
+// without memoize, redux thunk will call this function multiple times to fetch the user
+// instead of just once which is what we want
+const _fetchUser = _.memoize(async (id, dispatch) => {
+  const response = await jsonPlaceholder.get(`/users/${id}`);
+
+  dispatch({ type: "FETCH_USER", payload: response.data });
 });
