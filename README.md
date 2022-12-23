@@ -12,9 +12,12 @@ From the terminal, cd into a project and run `npm start`
 - [semantic-ui](http://semantic-ui.com/)
 - [babel](https://babeljs.io/)
 - [Redux](https://redux.js.org/)
+- [Redux Thunk](https://github.com/reduxjs/redux-thunk)
 - [Unsplash API](https://unsplash.com)
 - [Axios NPM Package](https://www.npmjs.com/package/axios)
 - [YouTube Data API](https://developers.google.com/youtube/v3/docs/search/list)
+- [lodash](https://lodash.com/)
+- [React Router](https://reactrouter.com/en/main)
 
 ## Notes
 
@@ -221,3 +224,28 @@ How is the value of "this" determined in a function?
     - Corner case for when mutaing state will result in an error
       - NOTE: Best practice is to not mutate state but this helps better understand what is happening behind the scenes of Redux
       - If you accidentally return the same value for state, your React app will never re-render
+- Navigation
+  - User wants to navigate to another page in our app
+  - User clicks a "Link" tag
+  - React Router prevents the browser from navigating to the new page and fetching new index.html file
+  - URL still changes
+  - "History" sees updated URL, takes URL and sends it to BrowserRouter
+  - BrowserRouter communicates the URL to Route components
+  - Different router types:
+    - BrowserRouter
+      - Uses everything after the TLD (.com, .net, etc) or port as the "path"
+      - localhost:3000/pagetwo
+    - HashRouter
+      - Uses everything after a "#" as the "path"
+      - localhost:3000/#/pagetwo
+    - MemoryRouter
+      - Doesn't use the URL to track navigation
+      - localhost:3000/
+- OAuth for Servers
+  - Results in a 'token' that a server can use to make requests on behalf of the user
+  - Usually used when we have an app that needs to access user data when they are not logged in
+  - Difficult to setup because we need to store a lot of info about the user
+- OAuth for JS Browser Apps
+  - Results in a 'token' that a browser app can use to make requests on behalf of the user
+  - Usually used when we have an app that only needs to access user data while they are logged in
+  - Very easy to set up thanks to Google's JS lib to automate flow
