@@ -18,6 +18,7 @@ From the terminal, cd into a project and run `npm start`
 - [YouTube Data API](https://developers.google.com/youtube/v3/docs/search/list)
 - [lodash](https://lodash.com/)
 - [React Router](https://reactrouter.com/en/main)
+- [Redux Form](https://redux-form.com/8.3.0/)
 
 ## Notes
 
