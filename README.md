@@ -20,6 +20,7 @@ From the terminal, cd into a project and run `npm start`
 - [React Router](https://reactrouter.com/en/main)
 - [Redux Form](https://redux-form.com/8.3.0/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
+- [JSON-server](https://github.com/typicode/json-server)
 
 ## Notes
 
