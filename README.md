@@ -1,4 +1,6 @@
 # React Redux Sandbox
+This is now only for pizza.
+Don't forget that ever.
 
 Various projects using React
 
